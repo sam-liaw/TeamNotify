@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Sam</Authors>
+    <Company>My Company</Company>
+    <Description>My MS Team Notify</Description>
+    <Copyright>MIT License</Copyright>
+    <PackageProjectUrl>https://github.com/sam-liaw/TeamNotify</PackageProjectUrl>
+    <PackageIconUrl>http://image.acmx.xyz/lindexi/2019427172218870</PackageIconUrl>
+    <PackageTags>C#, .Net Standard, MS Team</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.1.1</AssemblyVersion>
+    <FileVersion>1.0.1.1</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+</Project>
