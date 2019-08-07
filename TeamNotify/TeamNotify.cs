@@ -6,7 +6,7 @@ using System.Net.Http.Headers;
 
 namespace TeamNotify
 {
-    partial class Team
+    public class Team
     {
         private static Dictionary<int, string> _dicUrl = new Dictionary<int, string>();
         private static string _Url              = "";
