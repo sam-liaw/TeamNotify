@@ -10,19 +10,17 @@ namespace TeamNotify
     {
         private static Dictionary<int, string> _dicUrl = new Dictionary<int, string>();
         private static string _Url              = "";
-        private static string _fromTo           = "";
 
-        public Team(Dictionary<int, string> dicUrl, string fromTo)
+        public Team(Dictionary<int, string> dicUrl)
         {
             _dicUrl = dicUrl;
-            _fromTo = fromTo;
         }
 
         /// <summary>
         /// 送出 Team 的通知訊息
         /// </summary>
         /// <param name="message">訊息的內容字串</param>
-        public void TeamNotify(string message, int channel)
+        public void TeamNotify(string message, int channel, string fromTo)
         {
             try
             {
@@ -30,7 +28,7 @@ namespace TeamNotify
                 {
                     _Url = _dicUrl[channel];
 
-                    PostMessage(message, _fromTo);
+                    PostMessage(message, fromTo);
                 }
                 else
                 {
