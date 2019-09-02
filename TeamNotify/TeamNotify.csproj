@@ -7,10 +7,10 @@
     <Description>My MS Team Notify</Description>
     <Copyright>MIT License</Copyright>
     <PackageProjectUrl>https://github.com/sam-liaw/TeamNotify</PackageProjectUrl>
-    <PackageIconUrl>http://image.acmx.xyz/lindexi/2019427172218870</PackageIconUrl>
+    <PackageIconUrl>https://chiisen.github.io/image/github.io/cat-icon.png</PackageIconUrl>
     <PackageTags>C#, .Net Standard, MS Team</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
     <AssemblyVersion>1.0.1.3</AssemblyVersion>
     <FileVersion>1.0.1.3</FileVersion>
   </PropertyGroup>
