@@ -6,11 +6,14 @@ using System.Net.Http.Headers;
 
 namespace TeamNotify
 {
-    public class Team
+    public class TeamPayload
     {
-        private static Dictionary<int, string> _dicUrl = new Dictionary<int, string>();
-        private static string _Url              = "";
+        public string Title;
+        public string Text;
+    };
 
+    public class Team : Notify
+    {
         public Team(Dictionary<int, string> dicUrl)
         {
             _dicUrl = dicUrl;
@@ -41,20 +44,14 @@ namespace TeamNotify
             }
         }
 
-        public class Payload
-        {
-            public string Title;
-            public string Text;
-        };
-
         /// <summary>
         /// Post a message using simple strings
         /// </summary>
         /// <param name="text"></param>
         /// <param name="title"></param>
-        private void PostMessage(string text, string title)
+        protected void PostMessage(string text, string title)
         {
-            Payload payload = new Payload()
+            TeamPayload payload = new TeamPayload()
             {
                 Title = title,
                 Text = text,
@@ -66,14 +63,13 @@ namespace TeamNotify
         /// Post a message using a Payload object
         /// </summary>
         /// <param name="payload"></param>
-        private async void PostMessage(Payload payload)
+        protected async void PostMessage(TeamPayload payload)
         {
             string payloadJson = JsonConvert.SerializeObject(payload);
             var content = new StringContent(payloadJson);
             content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
             var client = new HttpClient();
-            Uri uri = new Uri(_Url);
-            await client.PostAsync(uri, content);
+            await client.PostAsync(new Uri(_Url), content);
         }
     }
 
