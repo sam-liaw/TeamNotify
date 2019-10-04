@@ -18,8 +18,22 @@ notify_.TeamNotify($"開機", 1 頻道, "通知來源");
 ```
 這樣幾行就能進行通知了  
 
+# JANDI 是類似「Microsoft Teams」通訊軟體  
+記憶體用量比微軟少很多  
+免費的，使用上也蠻好上手  
+有興趣的可以去瞭解一下  
+[JANDI 官方下載頁](https://www.jandi.com/landing/zh-tw)  
+``` c#
+Dictionary<int, string> dicUrl = new Dictionary<int, string>()
+{
+    {1 頻道,"https://IncomingWebhook 的網址" }
+};
+TeamNotify.JANDI notify_ = new TeamNotify.JANDI(dicUrl);
+notify_.Notify($"開機", 1 頻道, "通知來源");
+```
+
+使用上同「Microsoft Teams」只要這樣幾行就能進行通知了  
 
 
-
-###### tags: `Microsoft Teams`
+###### tags: `Microsoft Teams` `JANDI`
 
