@@ -23,7 +23,7 @@ namespace UnitTestProject
                 {1,"https://" }
             };
             Team notify_ = new Team(dicUrl);
-            notify_.TeamNotify($"代刚 Notify:{DateTime.Now.ToString()}", 1, "代刚");
+            notify_.Notify($"代刚 Notify:{DateTime.Now.ToString()}", 1, "代刚");
 
             MSTestLog.WriteLine($"代刚Θ:{DateTime.Now.ToString()}");
         }

@@ -23,7 +23,7 @@ namespace TeamNotify
         /// 送出 Team 的通知訊息
         /// </summary>
         /// <param name="message">訊息的內容字串</param>
-        public void TeamNotify(string message, int channel, string fromTo)
+        public void Notify(string message, int channel, string fromTo)
         {
             try
             {
